@@ -1,0 +1,15 @@
+version: '2.1'
+services:
+  main:
+    image: node:8
+    command: npm install
+    volumes:
+      - .:/usr/app/
+    ports:
+      - "3000:3000"
+  build:
+    image: node:8
+    working_dir: /usr/app
+    command: npm install
+    volumes:
+      - .:/usr/app/
